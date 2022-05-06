@@ -7,28 +7,53 @@
             font-family: "Helvetica Neue", Arial, sans-serif;
             font-size: 16px;
          }
+
+         h2 {
+            padding-top:25px;
+         }
+
          table {
             border-collapse: collapse;
          }
+
          tr, td, th {
             border-collapse: collapse;
             border: 1px solid grey;
             padding: 5px;
+         }
+
+         .flex-container {
+             display: flex;
+             flex-flow: row wrap;
+             background-color: grey;
+         }
+
+         .flex-container > div {
+            background-color: #f1f1f1;
+            width: 640px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
          }
       </style>
    </head>
 <body>
    <h1>QuickOWL Add-On/Extension</h1>
    <h2>Problem Statement</h2>
-   <p>For many users regular day job may involve copying text from one web page and pasting it in another web page to accomplish a task. Here task can be 1) Searching 2) Opening some web page where the input is copied text. If the copying and pasting is repeated multiple times a day, too much amount of time gets wasted in copying and going to the target web page and pasting it there.</p>
+   <p>For many users; regular work may involve copying text from one web page and pasting it in another web page to accomplish a task. Here task can be 1) Searching 2) Opening some web page where the input is copied text. If the copying and pasting is repeated multiple times a day, too much amount of time gets wasted in copying and going to the target web page and pasting it there.</p>
    <h2>Solution</h2>
-   <p>QuickOWL extension allows passing of selected text from a web page to favourite web pages through custom contextmenu. Once the extension is installed, all it takes to do searching or opening a page with selected text as input is: Selecting a text -&gt; Right Click -&gt; Choose QuickOWL -&gt; Choose the favourite web page as target. Selected text will be passed as input to favourite web page and it will be opened in a new tab.</p>
+   <p>QuickOWL extension allows passing of selected text from a web page to favourite web pages through custom contextmenu. Once the extension is installed, all it takes to do searching or opening a page with selected text as input is: Selecting a text &rarr; Right Click &rarr; Choose QuickOWL &rarr; Choose the favourite web page as target. Selected text will be passed as input to favourite web page and it will be opened in a new tab.</p>
    <h2>Screenshots</h2>
-   <img src="images/QS10.png" />
-   <img src="images/QS11.png" />
-   <img src="images/QS12.png" />
-   <img src="images/QS13.png" />
-   <img src="images/QS14.png" />
+   <div class="flex-container">
+      <div><img width="640px" height="400px" src="images/QS10.png" /></div>
+      <div><img width="640px" height="400px" src="images/QS11.png" /></div>
+      <div><img width="640px" height="400px" src="images/QS12.png" /></div>
+      <div><img width="640px" height="400px" src="images/QS13.png" /></div>
+      <div><img width="640px" height="400px" src="images/QS14.png" /></div>
+   </div>
+
+   <h2>Sample data</h2>
+   <p>Sample data used in the above screenshots can be downloaded from <a href="https://drive.google.com/file/d/1e9D_m7Ob3uSq7VJHSIrsDMXC-0Zd6zXi/view?usp=sharing" target="_blank">this Google Doc link</a>. Once downloaded the sample_urls.csv file can be selected for import in Import URLs option.</p>
 
    <h2>Supported Clients</h2>
    <table>
@@ -40,25 +65,51 @@
         <tbody>
            <tr>
                <td><a href="https://chrome.google.com/webstore/detail/quickowl/ocaikomnijglnnaaablieifbcnnfldeg" target="_blank">Google Chrome (Browser)</a></td>
-               <td>Window -&gt; Extensions -&gt; Find more add-ons</td>
+               <td>Window &rarr; Extensions &rarr; Find more add-ons</td>
                <td>The extension link should be opened in Google Chrome/Brave browser.</td>
            </tr>
            <tr>
                <td><a href="https://addons.mozilla.org/en-US/firefox/addon/quickowl/" target="_blank">Mozilla Firefox (Browser)</a></td>
-               <td>Tools -&gt; Add-ons and themes -&gt; Find more add-ons</td>
+               <td>Tools &rarr; Add-ons and themes &rarr; Find more add-ons</td>
                <td>The extension link should be opened in Firefox browser.</td>
            </tr>
            <tr>
                <td><a href="https://microsoftedge.microsoft.com/addons/detail/quickowl/hegeammijfamlljbfjgkkkjpodbcomjk" target="_blank">Microsoft Edge (Browser)</a></td>
-               <td>Window -&gt; Extensions -&gt; Find more add-ons</td>
+               <td>Window &rarr; Extensions &rarr; Find more add-ons</td>
                <td>The extension link should be opened in Microsoft Edge browser.</td>
            </tr>
            <tr>
                <td><a href="https://addons.thunderbird.net/en-US/thunderbird/addon/quickowl/" target="_blank">Thunderbird (Email Client)</a></td>
-               <td>Tools -&gt; Add-ons and themes -&gt; Find more add-ons -&gt; quickowl (type and press enter key)</td>
+               <td>Tools &rarr; Add-ons and themes &rarr; Find more add-ons &rarr; quickowl (type and press enter key)</td>
                <td>For Thunderbird, one should reach the add-on using the instructions in Navigation part to see + Add to Thunderbird button.</td>
            </tr>
         </tbody>
+   </table>
+
+   <h2>Work-in-progress</h2>
+   <table>
+       <thead>
+           <tr>
+              <th>Client</th><th>Status</th><th>Workaround</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+              <td>Outlook (Email Client)</td>
+              <td>In progress</td>
+              <td>Outlook email can be opened, using URL: https://outlook.office.com, in any of the browsers where QuickOWL add-on/extension is supported. The QuickOWL add-on/extension for browser will work for Outlook emails as well.</td>
+           </tr>
+           <tr>
+              <td>Safari (Browser)</td>
+              <td>Ready for publising to App Store, in the process of getting the extension listed.</td>
+              <td>-</td>
+           </tr>
+           <tr>
+              <td>Slack (Chat client)</td>
+              <td>Not started</td>
+              <td>Slack can be opened, using URL: https://slack.com, in any of the browsers where QuickOWL add-on/extension is supported. The QuickOWL add-on/extension for browser will work for Slack messages as well.</td>
+           </tr>
+       </tbody>
    </table>
 </body>
 </html>
