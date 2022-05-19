@@ -5,7 +5,11 @@
       <style>
          body {
             font-family: "Helvetica Neue", Arial, sans-serif;
+            line-height: 25px;
             font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            text-rendering: optimizeLegibility;
          }
 
          h2 {
@@ -39,13 +43,13 @@
    </head>
 <body>
    <h1>QuickOWL Add-On/Extension</h1>
-   <h2>Problem Statement</h2>
+   <h2 id="problem-statement">Problem Statement</h2>
    <p>For many users; regular work may involve copying text from one web page and pasting it in another web page to accomplish a task. Here task can be 1) Searching 2) Opening some web page where the input is copied text. If the copying and pasting is repeated multiple times a day, too much amount of time gets wasted in copying and going to the target web page and pasting it there.</p>
-   <h2>Solution</h2>
+   <h2 id="solution">Solution</h2>
    <p>QuickOWL extension allows passing of selected text from a web page to favourite web pages through custom contextmenu. Once the extension is installed, all it takes to do searching or opening a page with selected text as input is: Selecting a text &rarr; Right Click &rarr; Choose QuickOWL &rarr; Choose the favourite web page as target. Selected text will be passed as input to favourite web page and it will be opened in a new tab.</p>
-   <h2>Demo - of Chrome extension</h2>
+   <h2 id="demo">Demo - of Chrome extension</h2>
    <iframe width="560" height="315" src="https://www.youtube.com/embed/3YuuCEy-CnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   <h2>Screenshots</h2>
+   <h2 id="screenshots">Screenshots</h2>
    <div class="flex-container">
       <div><img width="640px" height="400px" src="images/QS10.png" /></div>
       <div><img width="640px" height="400px" src="images/QS11.png" /></div>
@@ -54,10 +58,10 @@
       <div><img width="640px" height="400px" src="images/QS14.png" /></div>
    </div>
 
-   <h2>Sample data</h2>
+   <h2 id="sample-data">Sample data</h2>
    <p>Sample data used in the above screenshots can be downloaded from <a href="https://drive.google.com/file/d/1e9D_m7Ob3uSq7VJHSIrsDMXC-0Zd6zXi/view?usp=sharing" target="_blank">this Google Doc link</a>. Once downloaded the sample_urls.csv file can be selected for import in Import URLs option.</p>
 
-   <h2>Supported Clients</h2>
+   <h2 id="supported-clients">Supported Clients</h2>
    <table>
         <thead>
            <tr>
@@ -76,6 +80,11 @@
                <td>The extension link should be opened in Firefox browser.</td>
            </tr>
            <tr>
+               <td><a href="https://apps.apple.com/in/app/quickowl/id1624439923?mt=12" target="_blank">Apple Safari (Browser)</a></td>
+               <td>Safari &rarr; Preferences (&#8984;,) &rarr; Extensions</td>
+               <td>The extension link can be opened from any browser in macOS.</td>
+           </tr>
+           <tr>
                <td><a href="https://microsoftedge.microsoft.com/addons/detail/quickowl/hegeammijfamlljbfjgkkkjpodbcomjk" target="_blank">Microsoft Edge (Browser)</a></td>
                <td>Window &rarr; Extensions &rarr; Find more add-ons</td>
                <td>The extension link should be opened in Microsoft Edge browser.</td>
@@ -88,7 +97,7 @@
         </tbody>
    </table>
 
-   <h2>Work-in-progress</h2>
+   <h2 id="work-in-progress">Work-in-progress</h2>
    <table>
        <thead>
            <tr>
@@ -102,24 +111,19 @@
               <td>Outlook email can be opened, using URL: https://outlook.office.com, in any of the browsers where QuickOWL add-on/extension is supported. The QuickOWL add-on/extension for browser will work for Outlook emails as well.</td>
            </tr>
            <tr>
-              <td>Safari (Browser)</td>
-              <td>Ready for publising to App Store, in the process of getting the extension listed.</td>
-              <td>-</td>
-           </tr>
-           <tr>
               <td>Slack (Chat client)</td>
               <td>Not started</td>
               <td>Slack can be opened, using URL: https://slack.com, in any of the browsers where QuickOWL add-on/extension is supported. The QuickOWL add-on/extension for browser will work for Slack messages as well.</td>
            </tr>
        </tbody>
    </table>
-   <h2>Privacy Policy</h2>
-   <p>
-   No personal information is collected, saved or transferred by this extension. The extension stores user defined URLs (Web links) in browser.storage.local storage of browser, and uses the stored data to generate custom contextmenu for the user to quickly open the web link with selected text as input. The data stored in browser's local storage never gets transmitted in any form. 
-   <br><br>
-   Though after installing the Permissions in Extension page says "Read your browsing history", it doesn't actually do any reading of browsing history. The extension focuses on sending the selected text to the user defined context menu URLs. No extra reading, no background activities.
-   </p>
-   <h2>Support</h2>
+   <h2 id="privacy-policy">Privacy Policy</h2>
+   <ol>
+   <li>No personal information is collected, saved or transferred by this extension. </li>
+   <li>The extension stores the user defined URLs (user data) locally inside browser's storage. This storage is local to the browser, and is accessible only through browser's extensions API. So, users can be assured that their URLs data is well protected, and there is no easy way to access it directly. This data never gets transmitted in any form.</li>
+   <li>Though after installing the Permissions in Extension page says "Read your browsing history", it doesn't actually do any reading of browsing history. The extension focuses on sending the selected text to the user defined context menu URLs. No extra reading, no additional background activities.</li>
+   </ol>
+   <h2 id="support">Support</h2>
    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSer9-UgGHjRGdkMXl70-jfdZ5Be-uAf4-xKKkJl7ANLA6AXAQ/viewform?embedded=true" width="640" height="1039" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 </body>
